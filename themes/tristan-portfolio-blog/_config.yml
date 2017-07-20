@@ -1,0 +1,27 @@
+# Header
+menu:
+  About: /
+  Portfolio: /portfolio
+  Blog: /archives
+  Contact: /contact
+
+# Read More text
+excerpt_link: Read More
+
+# customization
+contact_email: tristanljesse@gmail.com
+about_text: I'm a developer but I also enjoy writing and the sea. Join me on my continual journey into realizing how much I know nothing.
+blog_subtitle: Musings on programming, electronics and beyond.
+keywords: web development, web, development, programming, computer, electronics, design, web design, web design services, developer, wordpress, html, html5, javascript, node, mongo, php, sql, angular2, ionic
+
+# exterior links
+github: tljesse
+upwork: _~01dbddf061ee8df150
+facebook:
+linkedin: tristan-jesse-31288a41
+
+# Disqus comments
+disqus_shortname: tristanjesse
+
+# Google Analytics Tracking
+google_analytics: UA-102692586-1
