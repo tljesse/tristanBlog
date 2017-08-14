@@ -38,3 +38,5 @@ I also decided to try out [Adobe Illustrator](http://www.adobe.com/products/illu
 There are still a lot of things I want to do with the site and I'm sure I'll never be quite satisfied. I still think the mobile side needs some love, but I am only a little ashamed of where it stands now. Also at some point migrate over to git hosting which will make it easier for me to post updates. Hopefully if anyone comes across bugs, issues or just generally thinks my design looks terrible, you can let me know so I can improve!
 
 If you are still with me, I'm so sorry you had to read all of this. I really wanted to do a comprehensive article just about what I've done here. My goal is to post here regularly, once a week if possible (and if I can think of something to say) but once a month at least! So check back often, and happy coding!
+
+EDIT: Check out my [next post](http://www.tristanjesse.com/2017/07/31/Hexo-Theme-Release/) to get this blogs theme.
