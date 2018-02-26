@@ -1,6 +1,7 @@
 ---
 title: Shaking Things Up
 subtitle: A new look portfolio
+description: A quick rundown on the technology used to build this site.
 date: 2017-07-17 19:11:49
 tags:
 - portfolio

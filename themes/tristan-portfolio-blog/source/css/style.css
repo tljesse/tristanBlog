@@ -37,46 +37,46 @@
     margin-right: 0%; }
 
 .col-1 {
-  width: 5.58333%; }
+  width: 5.5833333333%; }
 
 .col-2 {
-  width: 14.16667%; }
+  width: 14.1666666667%; }
 
 .col-3 {
   width: 22.75%; }
 
 .col-4 {
-  width: 31.33333%; }
+  width: 31.3333333333%; }
 
 .col-5 {
-  width: 39.91667%; }
+  width: 39.9166666667%; }
 
 .col-6 {
   width: 48.5%; }
 
 .col-7 {
-  width: 57.08333%; }
+  width: 57.0833333333%; }
 
 .col-8 {
-  width: 65.66667%; }
+  width: 65.6666666667%; }
 
 .col-9 {
   width: 74.25%; }
 
 .col-10 {
-  width: 82.83333%; }
+  width: 82.8333333333%; }
 
 .col-11 {
-  width: 91.41667%; }
+  width: 91.4166666667%; }
 
 .col-12 {
   width: 100%; }
 
 .col-1-push {
-  margin-left: 5.58333%; }
+  margin-left: 5.5833333333%; }
 
 .col-2-push {
-  margin-left: 14.16667%; }
+  margin-left: 14.1666666667%; }
 
 /****************************
  * Mobile grid styles
@@ -507,6 +507,115 @@ span.cloze {
     float: left; }
     .search-form input {
       box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.1); } }
+@keyframes square-animation {
+  0% {
+    left: 0;
+    top: 0; }
+  10.5% {
+    left: 0;
+    top: 0; }
+  12.5% {
+    left: 32px;
+    top: 0; }
+  23% {
+    left: 32px;
+    top: 0; }
+  25% {
+    left: 64px;
+    top: 0; }
+  35.5% {
+    left: 64px;
+    top: 0; }
+  37.5% {
+    left: 64px;
+    top: 32px; }
+  48% {
+    left: 64px;
+    top: 32px; }
+  50% {
+    left: 32px;
+    top: 32px; }
+  60.5% {
+    left: 32px;
+    top: 32px; }
+  62.5% {
+    left: 32px;
+    top: 64px; }
+  73% {
+    left: 32px;
+    top: 64px; }
+  75% {
+    left: 0;
+    top: 64px; }
+  85.5% {
+    left: 0;
+    top: 64px; }
+  87.5% {
+    left: 0;
+    top: 32px; }
+  98% {
+    left: 0;
+    top: 32px; }
+  100% {
+    left: 0;
+    top: 0; } }
+@keyframes hue-rotate {
+  0% {
+    filter: hue-rotate(0deg); }
+  100% {
+    filter: hue-rotate(360deg); } }
+#cover {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #e3e3e3;
+  z-index: 9999; }
+
+.loading {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  transform: rotate(45deg);
+  animation: hue-rotate 10s linear infinite both; }
+
+.loading_square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  margin: 2px;
+  border-radius: 2px;
+  background: #07a;
+  background-image: linear-gradient(45deg, #fa0 40%, #0c9 60%);
+  background-image: -moz-linear-gradient(#fa0, #fa0);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  animation: square-animation 10s ease-in-out infinite both; }
+  .loading_square:nth-of-type(0) {
+    animation-delay: 0s; }
+  .loading_square:nth-of-type(1) {
+    animation-delay: -1.4285714286s; }
+  .loading_square:nth-of-type(2) {
+    animation-delay: -2.8571428571s; }
+  .loading_square:nth-of-type(3) {
+    animation-delay: -4.2857142857s; }
+  .loading_square:nth-of-type(4) {
+    animation-delay: -5.7142857143s; }
+  .loading_square:nth-of-type(5) {
+    animation-delay: -7.1428571429s; }
+  .loading_square:nth-of-type(6) {
+    animation-delay: -8.5714285714s; }
+  .loading_square:nth-of-type(7) {
+    animation-delay: -10s; }
+
 * {
   font-family: 'Bellefair', serif; }
 
@@ -554,19 +663,9 @@ a {
     -o-transition: color, linear, 0.5s, false;
     transition: color, linear, 0.5s, false; }
 
-#cover {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: #e3e3e3 url("../img/preload.gif") no-repeat center center;
-  z-index: 9999;
-  font-size: 60px;
-  text-align: center;
-  padding-top: 200px;
-  color: #fff; }
-
+/*#cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: $gray url('../img/preload.gif') no-repeat center center; z-index:9999; 
+    font-size: 60px; text-align: center; padding-top: 200px; color: #fff;
+}*/
 /**********************
  * Index styles
  */
@@ -595,6 +694,8 @@ a {
   font-size: 18px; }
 .portfolio-wrap img {
   max-width: 300px; }
+  .portfolio-wrap img.sosies {
+    content: url("../img/sosies.png"); }
   .portfolio-wrap img.pingdar {
     content: url("../img/pingdarLogo.png"); }
   .portfolio-wrap img.vaBarExam {
@@ -727,6 +828,15 @@ a {
       color: #e3e3e3;
       font-size: 30px;
       padding: 0px 20px; }
+
+/*************************
+ * 404 styles
+ */
+.error-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; }
 
 /******************************
  * Responsiveness styles

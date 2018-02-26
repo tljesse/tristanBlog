@@ -1,6 +1,7 @@
 ---
 title: Hexo Theme Release
 subtitle: Steal my code
+description: Full Hexo theme code for this website!
 date: 2017-07-31 16:17:46
 tags:
 - Hexo

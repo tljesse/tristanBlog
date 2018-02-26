@@ -18,6 +18,8 @@
 
 @import "partials/menu";
 
+@import "partials/preloader";
+
 * {
 	font-family: 'Bellefair', serif;
 }
@@ -63,9 +65,9 @@ a {
 	}
 }
 
-#cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: $gray url('../img/preload.gif') no-repeat center center; z-index:9999; 
+/*#cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: $gray url('../img/preload.gif') no-repeat center center; z-index:9999; 
     font-size: 60px; text-align: center; padding-top: 200px; color: #fff;
-}
+}*/
 
 /**********************
  * Index styles
@@ -123,6 +125,10 @@ a {
 
 	img {
 		max-width: 300px;
+
+		&.sosies {
+			content: url('../img/sosies.png');
+		}
 
 		&.pingdar {
 			content: url('../img/pingdarLogo.png');
@@ -265,6 +271,17 @@ a {
 		}
 	}
 }
+
+/*************************
+ * 404 styles
+ */
+
+ .error-404 {
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	height: 80vh;
+ }
 
 /******************************
  * Responsiveness styles

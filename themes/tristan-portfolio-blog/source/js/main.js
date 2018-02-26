@@ -1,7 +1,5 @@
-
-
 $(window).on('load', function() {
-  $("#cover").fadeOut(200);
+  $("#cover").fadeOut(500);
   AOS.init({
     duration: 1200,
     once: true

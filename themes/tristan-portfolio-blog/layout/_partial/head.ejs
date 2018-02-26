@@ -2,7 +2,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA=Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="<%= config.description %>">
+	<meta name="description" content="<%= page.description ? page.description : config.description %>">
 	<meta name="author" content="<%= config.author %>">
 	<% if (theme.keywords) { %><meta name="keywords" content="<%= theme.keywords %>"><% } %>
 
@@ -14,7 +14,30 @@
 	<meta property="og:url" content="<%= config.url %>">
 	<meta property="og:type" content="website">
 
-	<title><%= config.title %></title>
+	<%
+		var title = config.title; 
+		if (page.title || page.category || page.tag || page.archive) { 
+			var title = '';
+			if (page.category) title = page.category + ' | ' + config.title;
+			if (page.tag) title = 'Tags ' + page.tag + ' | ' + config.title;
+			if (page.archive){
+				if (page.year) {
+					title = 'Blog ';
+					var month = '';
+					if (page.month) {
+						var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+						month = monthNames[page.month - 1];
+					}
+					title += month + ' ' + page.year + ' | ' + config.title;
+				}
+				else {
+					title = 'Blog | ' + config.title ;
+				}
+			}
+			if (page.title) title = page.title + ' | ' + config.title;
+		} %>
+
+	<title><%= title %></title>
 
 	<%- css('css/normalize.css') %>
   <%- css('css/style.css') %>

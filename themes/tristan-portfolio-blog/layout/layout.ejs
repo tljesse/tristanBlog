@@ -3,21 +3,37 @@
 <html>
 <%- partial('_partial/head') %>
 <body>
-	<!-- Menu -->
-	<%- partial('_partial/menu') %>
-	<div class="jumbotron" <% if(is_home()) { %>data-aos="fade-up"<% } %>>
-		<!-- Blog Header; title and subtitle -->
-		<%- partial('_partial/header') %>
-	</div>
+	<% 
+		var error404 = page.title == 'page not found';
+		if (!error404) {
+	%>
+		<!-- Menu -->
+		<%- partial('_partial/menu') %>
+		<div class="jumbotron" <% if(is_home()) { %>data-aos="fade-up"<% } %>>
+			<!-- Blog Header; title and subtitle -->
+			<%- partial('_partial/header') %>
+		</div>
+	<% } %>
 	<div class="main">
 		<!-- Main content -->
 		<%- body %>
 	</div>
 
-	<!-- Footer -->
-	<%- partial('_partial/footer') %>
-	<!-- After footer scripts -->
-	<%- partial('_partial/after-footer') %>
-	<div id="cover"></div>
+	<% if (!error404) { %>
+		<!-- Footer -->
+		<%- partial('_partial/footer') %>
+		<!-- After footer scripts -->
+		<%- partial('_partial/after-footer') %>
+		<div id="cover">
+			<div class="loading">
+				<div class="loading_square"></div>
+				<div class="loading_square"></div>
+				<div class="loading_square"></div>
+				<div class="loading_square"></div>
+				<div class="loading_square"></div>
+				<div class="loading_square"></div>
+				<div class="loading_square"></div>
+		</div>
+	<% } %>
 </body>
 </html>
